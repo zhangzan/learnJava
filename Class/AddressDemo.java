@@ -4,9 +4,6 @@
  * @auth zhangzan
  * @date 2018-12-06 21:58:44
  */
-import lombok.Data;
-
-@Data
 class Address {
   private String country;
   private String province;
@@ -18,8 +15,28 @@ class Address {
     this.city = city;
   }
 
+  public void setCountry (String country) {
+    this.country = country;
+  }
+  public void setProvince (String province) {
+    this.province = province;
+  }
+  public void setCity (String city) {
+    this.city = city;
+  }
+
+  public String getCountry () {
+    return this.country;
+  }
+  public String getProvince () {
+    return this.province;
+  }
+  public String getCity () {
+    return this.city;
+  }
+
   public String getInfo () {
-    return "国家：" + this.getCountry() + "，城市：" + province + "，区：" + city;
+    return "国家：" + this.country + "，城市：" + this.province + "，区：" + this.city;
   }
 }
 
